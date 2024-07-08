@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <!-- Enlace al archivo CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a tu archivo CSS personalizado -->
+    <link rel="stylesheet" href="/src/static/css/registrar.css">
+</head>
+<body>
+    
+
+
+        <div class="contenedor" id="contenedor">
+            <div class="contenedor-formulario registrarse">
+                <form>
+                    <h1>Registrarse</h1>
+                    <span>o usa tu correo y contraseña</span>
+                    <input type="text" placeholder="Nombre" name="nombre">
+                    <input type="email" placeholder="Correo electrónico" name="correo">
+                    <input type="password" placeholder="Contraseña" name="password">
+                    <a href="/src/templates/layout.html">Registrarse</a>
+                </form>
+            </div>
+            <div class="contenedor-formulario iniciar-sesion">
+                <form>
+                    <h1>Iniciar Sesión</h1>
+                    <span>usa tu correo y contraseña</span>
+                    <input type="email" placeholder="Correo electrónico" name="txtCorreo">
+                    <input type="password" placeholder="Contraseña" name="txtPassword">
+                    <a href="/src/templates/layout.html">Iniciar Sesión</a>
+                </form>
+            </div>
+            <div class="contenedor-toggle">
+                <div class="interruptor">
+                    <div class="panel-interruptor izquierda">
+                        <h1>¿Que tal?</h1>
+                        <button class="oculto" id="inicio-sesion">Iniciar Sesión</button>
+                    </div>
+                    <div class="panel-interruptor derecha">
+                        <h1>¡Regresaste!</h1>
+                        <button class="oculto" id="registrarse">Registrarse</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+
+    </div>
+    <!-- Enlace al archivo JS de Bootstrap y dependencias de jQuery y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+                const contenedor = document.getElementById('contenedor');
+        const registrarseBtn = document.getElementById('registrarse');
+        const inicioSesionBtn = document.getElementById('inicio-sesion');
+
+        registrarseBtn.addEventListener('click', () => {
+            contenedor.classList.add("activo");
+        });
+
+        inicioSesionBtn.addEventListener('click', () => {
+            contenedor.classList.remove("activo");
+        });
+    </script>
+</body>
+</html>
