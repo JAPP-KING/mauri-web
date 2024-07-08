@@ -1,0 +1,11 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+}
+
+/* Estilos para el pie de página */
+.footer {
+    padding: 20px 0;
+    background-color: #343a40; /* Fondo oscuro */
+    color: #FFFFFF; /* Texto blanco */
+}
